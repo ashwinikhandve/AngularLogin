@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body >
+<form ng-submit="login()">
+<div  class="jumbotron text-center">
+		
+ <div class="container" style="height: 450px; width: 350px;text-align: center; background-color:#fce8e8; margin-top:  100px">
+        <div class="card card-container" style="padding-top: 30px;">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img"  class="profile-img-card" src="image/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" style="padding: 10px">
+                
+               <span ng-bind="errorMessage"></span>
+                
+                <input type="text" name="username" ng-model="username" class="form-control" placeholder="Username" required autofocus>
+                 
+                 <input type="password" name="password" ng-model="password" class="form-control" placeholder="Password" required>
+                
+                <div id="remember" class="checkbox"> 
+                </div>
+                <div align="center">
+           <button class="btn btn-lg btn-primary btn-block btn-signin" ng-click="login()" type="submit" style="height:35px; width: 120px;">Sign in</button>
+           </div> </form>
+            <label style="font-size: 20px">
+                    <input type="checkbox" value="remember-me"> Remember me
+             </label>
+            &nbsp; &nbsp; &nbsp;
+            <a href="#register" > Register</a>
+                
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+		
+	</div>
+	</form>
+</body>
+</html>
